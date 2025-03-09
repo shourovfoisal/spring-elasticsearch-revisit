@@ -1,6 +1,7 @@
 package com.shourov.spring_elasticsearch.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.shourov.spring_elasticsearch.constant.AppConstants;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown=true)
-@Document(indexName = "products")
+@Document(indexName = AppConstants.PRODUCT_INDEX_NAME)
 public class Product {
     @Id
     private String id;
